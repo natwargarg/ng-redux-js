@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="script.js"></script>
-    <title>Document</title>
+    <script src="https://unpkg.com/redux@latest/dist/redux.min.js"></script>
+    <title>ng-redux-js</title>
 </head>
 <body>
-    <button>+</button>
-    <span id="counter">0</span>
-    <button>-</button>
+    <button onclick="on_increement_btn_clicked(event)">+</button>
+    <span id="counterValue">0</span>
+    <button onclick="on_decreement_btn_clicked(event)">-</button>
+    <script src="script.js"></script>
 </body>
 </html>
