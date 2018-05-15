@@ -14,7 +14,7 @@ const DECREEMENT_ACTION = 'DECREEMENT_ACTION';
 //create initial state
 
 const initial_state = {counter:0}; 
-function counter(_state,_action) //create reducer function - return new state always
+function reducer(_state,_action) //create reducer function - return new state always
 {
     if (typeof _state === 'undefined') {
         return initial_state;
@@ -37,7 +37,14 @@ function on_increement_btn_clicked(event) {
 function on_decreement_btn_clicked(event) {
     store.dispatch({ type: DECREEMENT_ACTION }); //  Dispatch action to change app state. An action is a plain JS object that must have a 'type' key
 }
-const store = Redux.createStore(counter); //   The reducer function should handle all possible actions and initialize the app state
+// const store = Redux.createStore(reducer); //   The reducer function should handle all possible actions and initialize the app state
+
+/* eslint-disable no-underscore-dangle */
+  const store = createStore(
+   reducer, /* preloadedState, */
+   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+  );
+/* eslint-enable */
 
 const counterValueEl = document.getElementById('counterValue');
 
