@@ -40,7 +40,7 @@ function on_decreement_btn_clicked(event) {
 // const store = Redux.createStore(reducer); //   The reducer function should handle all possible actions and initialize the app state
 
 /* eslint-disable no-underscore-dangle */
-  const store = createStore(
+  const store = Redux.createStore(
    reducer, /* preloadedState, */
    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
   );
